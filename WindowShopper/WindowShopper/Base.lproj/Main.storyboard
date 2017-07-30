@@ -10,6 +10,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Optima.ttc">
+            <string>Optima-Bold</string>
             <string>Optima-Regular</string>
         </array>
     </customFonts>
@@ -32,10 +33,10 @@
                                     <constraint firstAttribute="width" constant="60" id="Yft-Pi-vCy"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ufR-cN-4F7">
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ufR-cN-4F7" userLabel="textFieldStackView">
                                 <rect key="frame" x="60" y="164" width="255" height="130"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your houlry wage" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9s-S9-uwT" customClass="CurrencyTextField" customModule="WindowShopper" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your houlry wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9s-S9-uwT" customClass="CurrencyTextField" customModule="WindowShopper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HxK-yQ-y1m"/>
@@ -44,7 +45,7 @@
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price of item" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsT-DC-ypN" customClass="CurrencyTextField" customModule="WindowShopper" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price of item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsT-DC-ypN" customClass="CurrencyTextField" customModule="WindowShopper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="80" width="255" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fxg-HH-Kuh"/>
@@ -58,6 +59,40 @@
                                     <constraint firstItem="K9s-S9-uwT" firstAttribute="centerX" secondItem="ufR-cN-4F7" secondAttribute="centerX" id="cGZ-ea-aJs"/>
                                 </constraints>
                             </stackView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="srT-L8-r3x" userLabel="hoursRevealStackView">
+                                <rect key="frame" x="60" y="350" width="255" height="117"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sf-UH-Y1W">
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="103.5"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="70"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKx-Ff-dgo">
+                                        <rect key="frame" x="0.0" y="83.5" width="255" height="33.5"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="28"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="Udn-Bn-7Bm"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRK-dn-POX" customClass="buttonStyles" customModule="WindowShopper" customModuleProvider="target">
+                                <rect key="frame" x="60" y="597" width="255" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.2478328339041096" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="mBl-b2-Rk1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItD-Ag-CN9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,14 +101,22 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ufR-cN-4F7" secondAttribute="trailing" constant="60" id="1e8-cc-w0l"/>
                             <constraint firstItem="Qr2-vx-Va9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="573-YB-Byn"/>
                             <constraint firstItem="ufR-cN-4F7" firstAttribute="top" secondItem="pi1-qF-eS7" secondAttribute="bottom" constant="49" id="9Ni-WW-8uT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jRK-dn-POX" secondAttribute="bottom" constant="20" id="AWL-oI-IO5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="srT-L8-r3x" secondAttribute="trailing" constant="60" id="CvY-7K-8iX"/>
                             <constraint firstItem="Qr2-vx-Va9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MK0-Vv-puB"/>
+                            <constraint firstItem="srT-L8-r3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="VG7-BD-RHr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jRK-dn-POX" secondAttribute="trailing" constant="60" id="Xbf-HD-CxJ"/>
+                            <constraint firstItem="jRK-dn-POX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="f7s-2w-G0L"/>
                             <constraint firstItem="pi1-qF-eS7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="g2h-6c-u0G"/>
+                            <constraint firstItem="srT-L8-r3x" firstAttribute="top" secondItem="ufR-cN-4F7" secondAttribute="bottom" constant="56" id="ijx-lF-LWx"/>
                             <constraint firstItem="Qr2-vx-Va9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mmH-y0-0fg"/>
                             <constraint firstItem="ufR-cN-4F7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="vCk-RY-MVm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLabel" destination="6Sf-UH-Y1W" id="5dj-F7-xme"/>
+                        <outlet property="hoursRevealedStackView" destination="srT-L8-r3x" id="wNP-Hx-n48"/>
                         <outlet property="priceTxt" destination="jsT-DC-ypN" id="8E2-9h-2F3"/>
                         <outlet property="wageTxt" destination="K9s-S9-uwT" id="KOQ-e5-ogH"/>
                     </connections>

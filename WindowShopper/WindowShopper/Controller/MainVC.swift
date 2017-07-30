@@ -12,6 +12,8 @@ class MainVC: UIViewController {
 
 	@IBOutlet weak var wageTxt: CurrencyTextField!
 	@IBOutlet weak var priceTxt: CurrencyTextField!
+	@IBOutlet weak var hoursRevealedStackView: UIStackView!
+	@IBOutlet weak var hoursLabel: UILabel!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -27,13 +29,27 @@ class MainVC: UIViewController {
 	}
 
 	@objc func calculate() {
-		print("We did it!")
+		
+		if let wageTxt = wageTxt.text, let priceTxt = priceTxt.text {
+			if let itemPrice = Double(priceTxt), let hourlyWage = Double(wageTxt) {
+				view.endEditing(true)
+				hoursLabel.text = "\(Wage.howManyHours(forWage: hourlyWage, forPrice: itemPrice))"
+				hoursRevealedStackView.isHidden = false
+				
+				
+			}
+		}
+		
 	}
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	
+
+	@IBAction func clearButtonTapped(_ sender: UIButton) {
+		wageTxt.text = ""
+		priceTxt.text = ""
+		wageTxt.placeholder = "Enter your hourly wage"
+		priceTxt.placeholder = "Enter item price"
+		hoursRevealedStackView.isHidden = true
 	}
-
-
+	
 }
 
