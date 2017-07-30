@@ -21,6 +21,7 @@ class buttonStyles: UIButton {
 	
 	func customizeView() {
 		layer.cornerRadius = 5.0
+		clipsToBounds = true
 		
 	}
 }
